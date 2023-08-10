@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bira <bira@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 18:48:52 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/10 11:10:01 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/05 20:20:07 by bira              #+#    #+#             */
+/*   Updated: 2023/08/05 23:42:14 by bira             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-size_t	ft_strlen(const char *content)
+char	*ft_strchr(const char *string, int c)
 {
+	char	*result;
 	size_t	index;
+	size_t	diff;
 
+	result = '\0';
 	index = 0;
-	while (content[index] != '\0')
-		index++;
-	return (index);
-}
-
-/*
-int	main(void)
-{
-	char	*string;
-
-	string = "playSTEM";
-	printf("string = %s\n", string);
-	printf("ft_strlen = %zu\n", ft_strlen(string));
+	while (string[index] != '\0')
+	{
+		while (string[index] != c)
+		{
+			index++;
+			diff++;
+		}
+		result -= *(result - diff);
+		return (result);
+	}
 	return (0);
 }
-*/

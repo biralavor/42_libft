@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 18:48:52 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/10 11:10:01 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/03 18:07:03 by bira              #+#    #+#             */
+/*   Updated: 2023/08/10 14:54:36 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *content)
+int	ft_isprint(unsigned char content)
 {
-	size_t	index;
-
-	index = 0;
-	while (content[index] != '\0')
-		index++;
-	return (index);
+	return (content >= 32 && content <= 126);
 }
-
-/*
-int	main(void)
-{
-	char	*string;
-
-	string = "playSTEM";
-	printf("string = %s\n", string);
-	printf("ft_strlen = %zu\n", ft_strlen(string));
-	return (0);
-}
-*/

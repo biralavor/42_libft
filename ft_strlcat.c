@@ -5,40 +5,52 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/06 11:21:18 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/09 12:50:21 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/04 14:35:59 by bira              #+#    #+#             */
+/*   Updated: 2023/08/10 15:30:13 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t concat_size)
+size_t	ft_strlcat(char *dest, const char *src, size_t catsize)
 {
-	size_t	dest_length;
-	size_t	src_length;
 	size_t	index;
+	size_t	dest_len;
+	size_t	src_len;
 
 	index = 0;
-	src_length = ft_strlen(src);
-	while (dest[index] != '\0')
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	if (dest_len > src_len)
 	{
-		if ((concat_size - 1) <= (size_t)dest[index])
-			index++;
-		else
-			index = index - (concat_size - 1);
-	}
-	dest_length = index;
-	index = 0;
-	if (dest_length > concat_size)
-		return (src_length + concat_size);
-	else if (dest_length < concat_size)
-	{
-		while ((index + dest_length) < (src_length))
+		while (catsize--)
 		{
-			dest[index + dest_length] = src[index];
+			dest[index + dest_len] = src[index];
 			index++;
 		}
-		dest[index + dest_length] = '\0';
 	}
-	return (dest_length + src_length);
+	else
+	{
+		while (catsize--)
+		{
+			dest[dest_len] = src[index];
+			dest_len++;
+			index++;
+		}
+	}
+	dest[index + dest_len] = '\0';
+	return (dest_len + src_len);
 }
+/*
+int	main(void)
+{
+	char		destination[20] = "playSTEM";
+	const char	source[13] = "123456789012";
+	
+	printf("Original destination = %s\n", destination);
+	printf("Original      source = %s\n", source);
+	printf("\033[0;33m");
+	ft_strlcat(destination, source, 5);
+	printf("Modified destination = %s\n", destination);
+	return (0);
+}*/

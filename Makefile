@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/09 18:31:53 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/10 15:50:27 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,10 @@ EXECUTABLE			= main
 
 SRC 				= main.c $(SRC_FUNCTIONS) $(TESTERS) $(PRINT_MSGS)
 
-SRC_FUNCTIONS		= ft_strdup.c ft_strlcat.c ft_strnstr.c			\
+SRC_FUNCTIONS		= ft_isalnum.c ft_isalpha.c ft_isascii.c	\
+					ft_isdigit.c ft_isprint.c 		\
+					ft_strdup.c ft_strlcat.c ft_strlcpy.c		\
+					ft_strnstr.c ft_strlen.c ft_strnstr.c
 
 TESTERS				= test_isalnum.c test_isalpha.c test_isascii.c	\
 					test_isdigit.c test_isprint.c 					\
@@ -73,7 +76,7 @@ $(NAME):			$(OBJS)
 
 %.o: %.c
 					$(CC) -c $(CFLAGS) $< -o $@ -I $(INCLUDE_PATH)$(INCLUDE)
-					@echo "\n$(SUCCESS)$(NAME): object files were created \o/ !$(COLOR_OFF)"
+					@echo "\n$(SUCCESS)The function was added as an object file in $(NAME) \o/ !$(COLOR_OFF)"
 
 clean:
 					@echo "\n$(NAME): $(WARNING)object files were deleted O.o$(COLOR_OFF)"

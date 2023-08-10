@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 18:48:52 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/10 11:10:01 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/10 14:57:23 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/10 15:48:02 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *content)
+int	ft_tolower(int c)
 {
-	size_t	index;
-
-	index = 0;
-	while (content[index] != '\0')
-		index++;
-	return (index);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
-
 /*
 int	main(void)
 {
-	char	*string;
+	char c = 'A';
 
-	string = "playSTEM";
-	printf("string = %s\n", string);
-	printf("ft_strlen = %zu\n", ft_strlen(string));
+	printf("Original char = %c\n", c);
+	printf("\033[0;33m");
+	printf("Modified char = %c\n", ft_tolower(c));
 	return (0);
 }
 */

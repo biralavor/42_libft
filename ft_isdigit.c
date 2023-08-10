@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 18:48:52 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/10 11:10:01 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/01 17:36:38 by bira              #+#    #+#             */
+/*   Updated: 2023/08/10 14:42:02 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *content)
+int	ft_isdigit(int input)
 {
-	size_t	index;
-
-	index = 0;
-	while (content[index] != '\0')
-		index++;
-	return (index);
+	return (input >= '0' && input <= '9');
 }
-
-/*
-int	main(void)
-{
-	char	*string;
-
-	string = "playSTEM";
-	printf("string = %s\n", string);
-	printf("ft_strlen = %zu\n", ft_strlen(string));
-	return (0);
-}
-*/
