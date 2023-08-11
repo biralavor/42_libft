@@ -6,27 +6,27 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:49:12 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/11 15:30:59 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/11 19:12:08 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "libft.h"
-
-char	*ft_strnstr(const char *s1, const char *tofind, size_t len);
 
 int	main(void)
 {
-	char	*x1;
-	char	*x2;
+	char	*string;
+	char	*needle;
+	size_t	max_size;
 
-	x1 = "Mussum Ipsum, cacilds vidis litro abertis.";
-	x2 = "Não sou faixa preta cumpadi, sou preto inteiris, inteiris.";
-	printf(" x1 = %s\n", x1);
-	printf(" x2 = %s\n", x2);
+	string = "Mussum Ipsum, cacilds vidis litro abertis.\nNão sou faixa preta cumpadi, sou preto inteiris, inteiris";
+	needle = "is";
+	max_size = ft_strlen(needle);
+	printf("   string = %s\n", string);
+	printf("   needle = %s\n", needle);
 	printf("\033[0;33m");
-	//printf("My Result = %s\n", ft_strnstr(x1, x2, 2));
-	//printf("Original function = %i\n", strnstr(x1, x2, 3));
+	printf("My Result = %s\n", ft_strnstr(string, needle, max_size));
 	return (0);
 }

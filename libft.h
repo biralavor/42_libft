@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/10 18:21:28 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/11 18:49:39 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t catsize);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
 size_t	ft_strlen(const char *content);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *s1, const char *tofind, size_t s1len);
 char	*ft_strrchr(const char *s1, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
