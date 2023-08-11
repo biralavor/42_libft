@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 11:16:00 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/07 11:39:10 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:25:42 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int	main(void)
 	lookfor = 'o';
 	printf("str = %s\n", str);
 	printf("lookfor = '%c'\n", lookfor);
+	printf("\033[0;33m");
 	printf("Result = %s\n", ft_strchr(str, lookfor));
 	return (0);
 }
