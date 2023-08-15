@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1ft_strnstr.c                                      :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 15:39:44 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/11 19:27:22 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/15 18:56:16 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 char	*ft_strnstr(const char *haystack, const char *tofind, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	unsigned int	i;
+	unsigned int	j;
 
-	if (len == 0 || len == '\0' || tofind[0] == '\0')
-		return ((char *)haystack);
-	else if (haystack[0] == '\0')
+	if (!len || *haystack == '\0')
 		return (NULL);
+	else if (*tofind == '\0')
+		return ((char *)haystack);
 	i = 0;
-	j = 0;
-	while ((haystack[i] && i) < len)
+	while (haystack[i] && i < len)
 	{
-		while (haystack[i] == tofind[j])
+		j = 0;
+		while ((haystack[i + j] == tofind[j]) && ((i + j) < len))
 		{
-			i++;
 			j++;
 			if (tofind[j] == '\0')
-				return ((char *)&haystack[i - j]);
-			else if (haystack[i] == '\0')
+				return ((char *)&haystack[i]);
+			else if (haystack[i + j] == '\0')
 				break ;
 		}
-		
-		i = i - j + 1;
+		i++;
 	}
-	return ((void *)0);
+	return (NULL);
 }
