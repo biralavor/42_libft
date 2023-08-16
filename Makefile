@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/16 17:52:59 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/16 19:08:29 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC_FTS				= ft_bzero.c	\
 					ft_memmove.c	\
 					ft_memset.c		\
 					ft_strchr.c		\
+					ft_strdup.c		\
 					ft_strlcat.c	\
 					ft_strlcpy.c	\
 					ft_strlen.c		\
@@ -37,7 +38,7 @@ SRC_FTS				= ft_bzero.c	\
 					ft_strnstr.c	\
 					ft_strrchr.c	\
 					ft_tolower.c	\
-					ft_toupper.c 
+					ft_toupper.c
 
 LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub
 
