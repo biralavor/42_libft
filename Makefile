@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/16 15:42:06 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/16 17:15:24 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,31 +14,22 @@ NAME 				= libft.a
 
 AUTHOR				= umeneses
 
-SUCCESS				= \033[0;32m	# green
-WARNING				= \033[0;35m	# purple
-UPDATING			= \033[0;33m	# Yellow
-COLOR_OFF			= \033[0m		# reset color
+SUCCESS				= \033[0;32m
+WARNING				= \033[0;35m
+UPDATING			= \033[0;33m
+COLOR_OFF			= \033[0m
 
-EXECUTABLE			= main
+SRC 				= $(SRC_FTS)
 
-SRC 				= main.c $(SRC_FUNCTIONS) $(TESTERS) $(PRINT_MSGS)
-
-SRC_FUNCTIONS		= ft_isalnum.c ft_isalpha.c ft_isascii.c	\
+SRC_FTS				= ft_isalnum.c ft_isalpha.c ft_isascii.c	\
 					ft_isdigit.c ft_isprint.c ft_memcpy.c		\
-					ft_memset.c ft_strchr.c	ft_strlcat.c		\
+					ft_memset.c ft_strchr.c ft_strlcat.c		\
 					ft_strlcpy.c ft_strlen.c ft_strncmp.c		\
 					ft_strnstr.c ft_strrchr.c ft_tolower.c		\
-					ft_toupper.c ft_bzero.c
-					
+					ft_toupper.c ft_bzero.c ft_memmove.c		\
+					ft_memchr.c
 
-TESTERS				= test_isalnum.c test_isalpha.c test_isascii.c	\
-					test_isdigit.c test_isprint.c 					\
-					test_strlcpy.c test_strlen.c
-
-PRINT_MSGS			= print_intro.c print_result_is_true.c			\
-					print_result_is_false.c
-
-LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_V01
+LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub
 
 INCLUDE_PATH		= $(LIBFT_PATH)/
 
@@ -63,14 +54,9 @@ NORM				= norminette -R CheckForbiddenSourcHeader
 all:				$(NAME)
 # default all command to compile
 
-$(EXECUTABLE):		$(OBJS)
-					$(CC) $(CFLAGS) $^ -o $@
-					@echo "\n$(SUCCESS)'$(EXECUTABLE)' file was generated :D $(COLOR_OFF)"
-					$(NORM) $(SRC_FUNCTIONS) $(PRINT_MSGS) $(INCLUDE)
-					@echo "\n$(SUCCESS)Running '$(EXECUTABLE)'...$(COLOR_OFF)"
-					@./$(EXECUTABLE)
-
 $(NAME):			$(OBJS)
+					@echo "\n$(SUCCESS) '$(NAME)' file was generated :D $(COLOR_OFF)"
+					$(NORM) $(SRC_FTS) $(INCLUDE)
 					@echo "\n$(SUCCESS)The functions below were added into $(NAME):$(COLOR_OFF)"
 					@echo "$(UPDATING)$(SRC)$(COLOR_OFF)"
 					@echo "$(SUCCESS)\o/$(COLOR_OFF)"
