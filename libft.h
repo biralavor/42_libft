@@ -6,19 +6,23 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/15 19:50:20 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 15:42:27 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
+# include <stdlib.h>
+/*	Library for mandatory functions */
+
 # include <string.h>
 # include <strings.h>
 # include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
 # include <ctype.h>
+/*	Library for testing functions.
+	Remember to remove them before sending to Moulinette. */
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(unsigned char content);
@@ -30,8 +34,8 @@ char	*ft_strdup(const char *src);
 void	*ft_memchr(const void *bigptr, int c, size_t len);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-void	*ft_memset(void *str, int c, size_t n);
+void	*ft_memmove(void *str1, const void *str2, size_t n);
+void	*ft_memset(void *str, int c, size_t size);
 char	*ft_strchr(const char *string, int c);
 size_t	ft_strlcat(char *dest, const char *src, size_t catsize);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
@@ -43,4 +47,4 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 #endif
-// Functions prototypes to be tested
+/*	Functions prototypes to be tested */
