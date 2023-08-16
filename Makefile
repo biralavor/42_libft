@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/16 17:15:24 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/16 17:52:59 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,15 +19,25 @@ WARNING				= \033[0;35m
 UPDATING			= \033[0;33m
 COLOR_OFF			= \033[0m
 
-SRC 				= $(SRC_FTS)
-
-SRC_FTS				= ft_isalnum.c ft_isalpha.c ft_isascii.c	\
-					ft_isdigit.c ft_isprint.c ft_memcpy.c		\
-					ft_memset.c ft_strchr.c ft_strlcat.c		\
-					ft_strlcpy.c ft_strlen.c ft_strncmp.c		\
-					ft_strnstr.c ft_strrchr.c ft_tolower.c		\
-					ft_toupper.c ft_bzero.c ft_memmove.c		\
-					ft_memchr.c
+SRC_FTS				= ft_bzero.c	\
+					ft_isalnum.c	\
+					ft_isalpha.c	\
+					ft_isascii.c	\
+					ft_isdigit.c	\
+					ft_isprint.c	\
+					ft_memchr.c		\
+					ft_memcpy.c		\
+					ft_memmove.c	\
+					ft_memset.c		\
+					ft_strchr.c		\
+					ft_strlcat.c	\
+					ft_strlcpy.c	\
+					ft_strlen.c		\
+					ft_strncmp.c	\
+					ft_strnstr.c	\
+					ft_strrchr.c	\
+					ft_tolower.c	\
+					ft_toupper.c 
 
 LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub
 
@@ -35,7 +45,7 @@ INCLUDE_PATH		= $(LIBFT_PATH)/
 
 INCLUDE				= libft.h
 
-OBJS 				= $(SRC:.c=.o)
+OBJS 				= $(SRC_FTS:.c=.o)
 # Use same files from SRC, but change .c to .o
 
 AR 					= @ar -rcs
@@ -58,7 +68,7 @@ $(NAME):			$(OBJS)
 					@echo "\n$(SUCCESS) '$(NAME)' file was generated :D $(COLOR_OFF)"
 					$(NORM) $(SRC_FTS) $(INCLUDE)
 					@echo "\n$(SUCCESS)The functions below were added into $(NAME):$(COLOR_OFF)"
-					@echo "$(UPDATING)$(SRC)$(COLOR_OFF)"
+					@echo "$(UPDATING)$(SRC_FTS)$(COLOR_OFF)"
 					@echo "$(SUCCESS)\o/$(COLOR_OFF)"
 					$(AR) $(NAME) $(OBJS)
 # Compile files following above rules
