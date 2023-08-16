@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   0ft_memcmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:06:10 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/11 15:07:57 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 16:34:19 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
+	
+	unsigned char	*newstr1;
+	unsigned char	*newstr2;
 
-
+	if (*str1 == NULL || *str2 == NULL)
+		return (NULL);
+	newstr1 = (unsigned char *)str1;
+	newstr2 = (unsigned char *)str2;
+	while (n != 0)
+	{
+		ft_strncmp();
+	}
 	return ();
 }
 
@@ -23,11 +35,9 @@ The C library function int memcm
 (const void *str1, const void *str2, size_t n))
 compares the first n bytes of memory area str1
 and memory area str2.
-
-str1 − This is the pointer to a block of memory.
-str2 − This is the pointer to a block of memory.
-   n − This is the number of bytes to be compared.
-
+	str1 − This is the pointer to a block of memory.
+	str2 − This is the pointer to a block of memory.
+	n − This is the number of bytes to be compared.
 #Return:
 if Return value < 0 then it indicates str1 is less than str2.
 if Return value > 0 then it indicates str2 is less than str1.
