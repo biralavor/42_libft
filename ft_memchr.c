@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:04:20 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 16:17:32 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 17:32:17 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 	index = 0;
 	newstr = (unsigned char *)str;
-	if (str == NULL && c == '\0')
+	if (c == '\0')
 		return (NULL);
 	while (index < n)
 	{
