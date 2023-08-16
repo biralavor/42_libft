@@ -6,13 +6,13 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:07:03 by bira              #+#    #+#             */
-/*   Updated: 2023/08/10 14:54:36 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 17:23:14 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(unsigned char content)
+int	ft_isprint(int content)
 {
 	return (content >= 32 && content <= 126);
 }
