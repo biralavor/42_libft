@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 15:39:44 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/15 18:56:16 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 17:53:56 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,26 @@ char	*ft_strnstr(const char *haystack, const char *tofind, size_t len)
 	unsigned int	i;
 	unsigned int	j;
 
-	if (!len || *haystack == '\0')
-		return (NULL);
+	if (!*haystack)
+		return (0);
 	else if (*tofind == '\0')
 		return ((char *)haystack);
-	i = 0;
-	while (haystack[i] && i < len)
+	else
 	{
-		j = 0;
-		while ((haystack[i + j] == tofind[j]) && ((i + j) < len))
+		i = 0;
+		while (haystack[i] && i < len)
 		{
-			j++;
-			if (tofind[j] == '\0')
-				return ((char *)&haystack[i]);
-			else if (haystack[i + j] == '\0')
-				break ;
+			j = 0;
+			while ((haystack[i + j] == tofind[j]) && ((i + j) < len))
+			{
+				j++;
+				if (tofind[j] == '\0')
+					return ((char *)&haystack[i]);
+				else if (haystack[i + j] == '\0')
+					break ;
+			}
+			i++;
 		}
-		i++;
 	}
 	return (NULL);
 }
