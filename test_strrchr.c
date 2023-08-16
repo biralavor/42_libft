@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 11:16:00 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/07 15:31:28 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 10:50:46 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "print_msgs.h"
 // Custom Library functions
 
-char	*ft_strrchr(const char *s1, int c);
 /*
 #pragma region ft_strchr_tests
 void	ft_strchr_test_one_o(void)
@@ -43,12 +42,13 @@ void	ft_test_all_ft_strchr(void)
 int	main(void)
 {
 	char	*str;
-	int		lookfor;
+	char	lookfor;
 
 	str = "Mussum Ipsum, cacilds vidis litro abertis.";
-	lookfor = 'o';
+	lookfor = 'm';
 	printf("str = %s\n", str);
 	printf("lookfor = '%c'\n", lookfor);
-	printf("Result = %s\n", ft_strrchr(str, lookfor));
+	printf("\033[0;33m");
+	printf("Result = '%s'\n", ft_strrchr(str, lookfor));
 	return (0);
 }
