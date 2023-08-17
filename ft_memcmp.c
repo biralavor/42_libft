@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:06:10 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 16:34:19 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/17 16:14:17 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	
 	unsigned char	*newstr1;
 	unsigned char	*newstr2;
 
-	if (*str1 == NULL || *str2 == NULL)
-		return (NULL);
+	if (n == 0)
+		return (0);
 	newstr1 = (unsigned char *)str1;
 	newstr2 = (unsigned char *)str2;
-	while (n != 0)
+	while (n > 0)
 	{
-		ft_strncmp();
+		if (*newstr1 != *newstr2)
+			return (*newstr1 - *newstr2);
+		newstr1++;
+		newstr2++;
+		n--;
 	}
-	return ();
+	return (0);
 }
 
 /*
