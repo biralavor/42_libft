@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/16 19:08:29 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/17 19:43:56 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,14 @@ UPDATING			= \033[0;33m
 COLOR_OFF			= \033[0m
 
 SRC_FTS				= ft_bzero.c	\
+					ft_calloc.c		\
 					ft_isalnum.c	\
 					ft_isalpha.c	\
 					ft_isascii.c	\
 					ft_isdigit.c	\
 					ft_isprint.c	\
 					ft_memchr.c		\
+					ft_memcmp.c		\
 					ft_memcpy.c		\
 					ft_memmove.c	\
 					ft_memset.c		\
