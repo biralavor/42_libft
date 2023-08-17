@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 18:55:52 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/17 17:48:12 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 	Remember to remove them before sending to Moulinette. */
 
 void	ft_bzero(void *s, size_t n);
-void	*calloc(size_t n_items, size_t size);
+void	*ft_calloc(size_t n_items, size_t size);
 int		ft_isalnum(unsigned char content);
 int		ft_isalpha(int c);
 int		ft_isascii(int content);
