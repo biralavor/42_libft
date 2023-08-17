@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 18:09:44 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/17 17:50:35 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/17 20:15:07 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	*ft_calloc(size_t n_items, size_t size)
 {
-	size_t	*ptr;
+	void	*ptr;
 
 	if (!n_items)
 		return (NULL);
-	if (n_items == 0 || size == 0)
+	if (n_items == 0 && size == 0)
 		return (NULL);
 	ptr = malloc(n_items * size);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, n_items * size);
-	return ((void *)ptr);
+	return (ptr);
 }
 
 /*
