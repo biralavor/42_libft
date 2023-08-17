@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 18:06:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/09 18:06:03 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/17 20:17:31 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strdup(const char *src)
 {
 	char	*ptr;
 
-	if (src == NULL)
-		return (NULL);
 	ptr = (char *)malloc(ft_strlen(src) + 1);
 	if (!ptr)
 		return (NULL);
