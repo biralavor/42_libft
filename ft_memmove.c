@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 14:44:40 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/17 16:55:20 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/17 19:44:22 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	char	*newsrc;
 	size_t	index;
 
-	if (!str1 || !str2)
-		return (NULL);
 	newdest = (char *)str1;
 	newsrc = (char *)str2;
 	if (newdest < newsrc)
