@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 20:33:48 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 18:04:59 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/17 16:57:32 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	main(void)
 	printf("dest = %s\n", dest);
 	printf("src  = %s\n", src);
 	printf("\033[0;33m");
-	ft_memmove(dest, src, 5);
+	ft_memmove(dest, src, 25);
 	printf("My ft_memcpy dest = %s\n", dest);
 	printf("\033[0;34m");
-	memmove(dest, src, 5);
+	memmove(dest, src, 25);
 	printf("  Original memcpy = %s\n", dest);
 	return (0);
 }
