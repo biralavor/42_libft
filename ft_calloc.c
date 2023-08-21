@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 18:09:44 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/17 20:15:07 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/21 13:56:09 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ void	*ft_calloc(size_t n_items, size_t size)
 {
 	void	*ptr;
 
-	if (!n_items)
-		return (NULL);
 	if (n_items == 0 && size == 0)
-		return (NULL);
+		return (malloc(0));
 	ptr = malloc(n_items * size);
 	if (!ptr)
 		return (NULL);
@@ -39,5 +37,4 @@ the memory to zero where as calloc sets allocated memory to zero.
 The name "calloc" stands for contiguous allocation.
 The malloc() function allocates memory and leaves
 the memory uninitialized, whereas the calloc() function allocates
-memory and initializes all bits to zero.
-*/
+memory and initializes all bits to zero. */
