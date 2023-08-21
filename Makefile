@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/17 19:43:56 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/21 14:11:53 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ WARNING				= \033[0;35m
 UPDATING			= \033[0;33m
 COLOR_OFF			= \033[0m
 
-SRC_FTS				= ft_bzero.c	\
+SRC_FTS				= ft_atoi.c		\
+					ft_bzero.c		\
 					ft_calloc.c		\
 					ft_isalnum.c	\
 					ft_isalpha.c	\
