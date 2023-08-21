@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/17 17:48:12 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/21 14:11:38 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 /*	Library for testing functions.
 	Remember to remove them before sending to Moulinette. */
 
+int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t n_items, size_t size);
 int		ft_isalnum(unsigned char content);
