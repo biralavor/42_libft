@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 15:09:36 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/21 16:40:17 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/21 17:13:41 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	signal = 1;
 	result = 0;
-	while (str[i] == '\t' || str[i] == '\r' || str[i] == '\f' || \
-			str[i] == '\v' || str[i] == '\b' || str[i] == '\n' || \
-			str[i] == ' ')
+	while ((str[i] > 8 && str[i] < 14) || str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
