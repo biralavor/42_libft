@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/22 12:33:21 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/23 13:31:11 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <stdio.h>
 # include <ctype.h>
 /*	Library for testing functions.
-	Remember to remove them before sending to Moulinette. */
+	Remember to remove them before sending it to Moulinette. */
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -47,7 +47,10 @@ char	*ft_strnstr(const char *haystack, const char *tofind, size_t len);
 char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_itoa(int n);
+/* Part 2*/
 
 #endif
 /*	Functions prototypes to be tested */
