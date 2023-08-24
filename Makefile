@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/23 19:26:22 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/24 11:12:12 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ SRC_FTS				= ft_atoi.c		\
 					ft_substr.c		\
 					ft_itoa.c		\
 					ft_putchar_fd.c	\
-					ft_putstr_fd.c
+					ft_putstr_fd.c	\
+					ft_putendl_fd.c
 
 LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub
 
