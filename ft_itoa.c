@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 11:40:18 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/23 16:04:52 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/24 18:05:48 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,29 @@ static	int	ft_intlen(int nbr)
 
 char	*ft_itoa(int n)
 {
-	int		index;
-	char	*result;
+	size_t			intlen;
+	size_t			index;
+	char			*result;
+	long long int	nbr;
 
-	index = ft_intlen(n);
-	result = (char *)malloc((index + 1) * sizeof(char));
+	intlen = ft_intlen(n);
+	nbr = n;
+	result = (char *)malloc((intlen + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
-	if (!ft_isdigit((long int)n))
-		return (0);
-	else
+	if (nbr < 0)
 	{
-		while (index > 0)
-		{
-			*result++ = ft_isdigit(n) + '0';
-			index--;
-			n /= 10;
-		}
-		result[index] = '\0';
-		return (result);
+		result[0] = '-';
+		nbr *= -1;
 	}
+	if (nbr == 0)
+		result[0] = '0';
+	index = intlen - 1;
+	while (nbr > 0)
+	{
+		result[index--] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+	}
+	result[intlen] = '\0';
+	return (result);
 }
