@@ -3,42 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bira <bira@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:28:38 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/24 18:46:47 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/25 20:34:14 by bira             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int nbr)
-{
-	size_t	index;
-
-	index = 0;
-	if (nbr < 0)
-		nbr = nbr * -1;
-	if (nbr == 0)
-		index++;
-	while (nbr)
-	{
-		nbr = nbr / 10;
-		index++;
-	}
-	return (index);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*ptr;
+	long long	nbr;
 
-	if (n > 0 && n <= 9)
+	nbr = n;
+	if (n < 0)
 	{
-		n = n % 10 + '0';
-		return (ft_putchar_fd(n, fd));
+		ft_putchar_fd('-', fd);
+		nbr = n * (long long)-1;
 	}
-	ptr = ft_itoa(n);
-	ft_putstr_fd(ptr, fd);
-	free(ptr);
+	if (nbr < 10)
+		return (ft_putchar_fd(((nbr % 10) + '0'), fd));
+	if (nbr >= 10)
+	{
+		ft_putnbr_fd((nbr / 10), fd);
+		ft_putchar_fd(((nbr % 10) + '0'), fd);
+	}
 }
