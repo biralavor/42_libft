@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
+#    By: bira <bira@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/24 16:54:18 by umeneses         ###   ########.fr        #
+#    Updated: 2023/08/25 21:32:26 by bira             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,11 +47,12 @@ SRC_FTS				= ft_atoi.c		\
 					ft_putchar_fd.c	\
 					ft_putstr_fd.c	\
 					ft_putendl_fd.c	\
-					ft_putnbr_fd.c
+					ft_putnbr_fd.c	\
+					ft_striteri.c
 
-LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub
+LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub/
 
-INCLUDE_PATH		= $(LIBFT_PATH)/
+#INCLUDE_PATH		= $(LIBFT_PATH)/
 
 INCLUDE				= libft.h
 
@@ -84,8 +85,12 @@ $(NAME):			$(OBJS)
 # Compile files following above rules
 
 %.o: %.c
-					$(CC) -c $(CFLAGS) $< -o $@ -I $(INCLUDE_PATH)$(INCLUDE)
+					$(CC) -c $(CFLAGS) $< -o $@ -I. -I$(LIBFT_PATH)
 					@echo "\n$(SUCCESS)The function was added as an object file in $(NAME) \o/ !$(COLOR_OFF)"
+
+#%.o: %.c
+#$(CC) -c $(CFLAGS) $< -o $@ -I $(INCLUDE_PATH)$(INCLUDE)
+#@echo "\n$(SUCCESS)The function was added as an object file in $(NAME) \o/ !$(COLOR_OFF)"
 
 clean:
 					@echo "\n$(NAME): $(WARNING)object files were deleted O.o$(COLOR_OFF)"
