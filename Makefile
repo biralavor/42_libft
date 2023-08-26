@@ -6,7 +6,7 @@
 #    By: bira <bira@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/26 08:46:02 by bira             ###   ########.fr        #
+#    Updated: 2023/08/26 12:19:47 by bira             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ SRC_FTS				= ft_atoi.c		\
 					ft_putendl_fd.c	\
 					ft_putnbr_fd.c	\
 					ft_striteri.c	\
-					ft_strmapi.c
+					ft_strmapi.c	\
+					ft_strjoin.c
 
 LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub/
 
