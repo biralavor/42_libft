@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_split.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bira <bira@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 14:13:07 by bira              #+#    #+#             */
-/*   Updated: 2023/08/27 12:20:30 by bira             ###   ########.fr       */
+/*   Updated: 2023/08/28 11:19:36 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int	main(void)
 	printf("\033[0;33m");
 	result = (char *)ft_split(s_long, delimiter);
 	printf("str_split = %s\n", result);
-	return (0);
 	free(result);
+	return (0);
 }
