@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 17:34:58 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/17 17:49:58 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:43:56 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 	int	*ptr;
 	int	*ptr2;
 	int	sum;
-	int sum2;
+	int	sum2;
 
 	i = 0;
 	ptr = calloc(10, sizeof(int));

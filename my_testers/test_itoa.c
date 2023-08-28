@@ -6,13 +6,13 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:19:10 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/23 15:25:10 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:43:06 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main (void)
+int	main(void)
 {
 	int		integer;
 	char	*result;

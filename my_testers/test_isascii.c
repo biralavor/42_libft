@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 10:34:07 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/06 17:21:19 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:31:08 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "print_msgs.h"
 // Custom Library functions
 
-#pragma region ft_isascii_tests
 void	ft_isascii_test_one_nonprint(void)
 {
 	int	test_non_print;
@@ -48,7 +47,6 @@ void	ft_isascii_test_three_extended(void)
 	else
 		print_result_is_false();
 }
-#pragma endregion ft_isascii_tests
 
 void	ft_test_all_ft_isascii(void)
 {

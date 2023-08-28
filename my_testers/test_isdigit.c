@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 19:12:39 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/07 11:42:03 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:30:44 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "print_msgs.h"
 // Custom Library functions
 
-#pragma region ft_isdigit_tests
 void	ft_isdigit_test_one_int(void)
 {
 	int	number;
@@ -37,7 +36,6 @@ void	ft_isdigit_test_two_ints(void)
 	else
 		print_result_is_false();
 }
-#pragma endregion ft_isdigit_tests
 
 void	ft_test_all_ft_isdigit(void)
 {

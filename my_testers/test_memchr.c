@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 10:59:22 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 16:15:38 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:33:08 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(void)
 	unsigned char	bigchar[99] = "playSTEM academy";
 	int				c;
 	unsigned char	*result;
-	
+
 	c = 'S';
 	printf("bigchar = %s\n", bigchar);
 	printf("look for char = '%c'\n", c);

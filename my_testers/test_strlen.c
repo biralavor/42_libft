@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 12:04:35 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/06 12:46:16 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:43:25 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "print_msgs.h"
 // Custom Library functions
 
-#pragma region ft_strlen_tests
 void	ft_strlen_test_one(void)
 {
 	const char	*test_str;
@@ -28,7 +27,6 @@ void	ft_strlen_test_one(void)
 	else
 		print_result_is_false();
 }
-#pragma endregion ft_strlen_tests
 
 void	ft_test_all_ft_strlen(void)
 {
