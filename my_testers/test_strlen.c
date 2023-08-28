@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 12:04:35 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/28 14:43:25 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:06:09 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 void	ft_strlen_test_one(void)
 {
 	const char	*test_str;
-	size_t	check_result;
+	size_t		check_result;
 
 	test_str = "playSTEM";
 	check_result = 8;

@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 10:34:07 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/28 14:31:08 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:10:57 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_isascii_test_one_nonprint(void)
 void	ft_isascii_test_two_specialchar(void)
 {
 	int	test_special_char;
-	
+
 	test_special_char = '}';
 	if (ft_isascii(test_special_char) == 1)
 		print_result_is_true();

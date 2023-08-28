@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/07 13:22:06 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:15:21 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_tolower(int c);
 
 int	main(void)
 {
-	char toconvert;
+	char	toconvert;
 
 	toconvert = 'D';
 	printf("Item to test = %c\n", toconvert);

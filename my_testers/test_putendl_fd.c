@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:32:29 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/28 14:15:39 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:11:51 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	char *string;
+	char	*string;
 
 	string = "end!";
 	printf("\033[0;33m");
