@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_substr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bira <bira@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:43:52 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/23 11:13:36 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/27 16:38:44 by bira             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	main (void)
 {
-	char	string[] = "playSTEM academy";
+	char	string[] = "The site is https://playSTEM.academy/";
 	int		start;
 	int		len;
 
-	start = 4;
-	len = 4;
+	start = 11;
+	len = 30;
 	printf("\033[0;33m");
-	printf("      My subtr = %s\n", ft_substr(string, start, len));
+	printf("My subtr = %s\n", ft_substr(string, start, len));
 	return (0);
 }
