@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 14:03:37 by bira              #+#    #+#             */
-/*   Updated: 2023/08/30 14:09:52 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:57:38 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char	**ft_split(char const *s, char c)
 		result[index] = ft_substr(s, start, sub_len);
 		start = start + sub_len + 1;
 		index++;
+		result[words] = NULL;
 	}
 	return (result);
 }
