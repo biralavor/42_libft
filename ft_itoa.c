@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 11:40:18 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/24 18:05:48 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/30 17:22:38 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 
 	intlen = ft_intlen(n);
 	nbr = n;
-	result = (char *)malloc((intlen + 1) * sizeof(char));
+	result = (char *)ft_calloc((intlen + 1), sizeof(char));
 	if (!result)
 		return (NULL);
 	if (nbr < 0)
