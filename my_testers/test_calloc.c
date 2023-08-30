@@ -6,49 +6,53 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 17:34:58 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/28 14:43:56 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/30 17:40:00 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+void	ft_test_original_calloc(void)
 {
 	int	i;
 	int	*ptr;
-	int	*ptr2;
 	int	sum;
-	int	sum2;
 
-	i = 0;
 	ptr = calloc(10, sizeof(int));
-	ptr2 = ft_calloc(10, sizeof(int));
+	i = 0;
 	sum = 0;
-	sum2 = 0;
-	if (ptr == NULL)
-	{
-		printf("Error. Memory not allocated.\n");
-		return (0);
-	}
-	printf("sum of 10 elements of INT type.\n");
 	while (i < 10)
 	{
 		*(ptr + i) = i;
 		sum += *(ptr + i);
 		i++;
 	}
-	i = 0;
-	while (i < 10)
-	{
-		*(ptr2 + i) = i;
-		sum2 += *(ptr2 + i);
-		i++;
-	}
-	printf("\033[0;33m");
-	printf("   SUM, using my ft_calloc = %d\n", sum2);
-	printf("\033[0;34m");
 	printf("SUM, using original calloc = %d\n", sum);
 	free(ptr);
-	free(ptr2);
+}
+
+void	ft_test_my_calloc(void)
+{
+	int	i;
+	int	*ptr;
+	int	sum;
+
+	i = 0;
+	sum = 0;
+	ptr = ft_calloc(10, sizeof(int));
+	while (i < 10)
+	{
+		*(ptr + i) = i;
+		sum += *(ptr + i);
+		i++;
+	}
+	printf("   SUM, using my ft_calloc = %d\n", sum);
+	free(ptr);
+}
+
+int	main(void)
+{
+	ft_test_original_calloc();
+	ft_test_my_calloc();
 	return (0);
 }
