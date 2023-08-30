@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_strjoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bira <bira@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 12:16:47 by bira              #+#    #+#             */
-/*   Updated: 2023/08/26 13:54:51 by bira             ###   ########.fr       */
+/*   Updated: 2023/08/30 19:12:21 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int	main(void)
 	printf("\033[0;33m");
 	result = ft_strjoin(s1, s2);
 	printf("strjoin = %s\n", result);
+	free (result);
 	return (0);
 }
