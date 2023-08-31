@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 09:45:32 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 10:08:00 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/31 10:20:02 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	function(unsigned int index, char c)
 {
 	char	modif_str;
-	
+
 	modif_str = c + 1;
 	return (modif_str);
 }
