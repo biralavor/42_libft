@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 13:05:46 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/30 13:34:41 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/31 15:39:23 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,19 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
-	size_t	index;
-	size_t	i_set;
+	size_t	begin_index;
+	size_t	end_index;
 
-	if (!*s1 || !*set)
-		return (NULL);
-	index = 0;
-	i_set = 0;
-	while (set[i_set])
-	{
-		if (s[index] == [set[i_set]])
-		{
-			
-		}
-	}
-	
-	result = (char *)ft_calloc(, sizeof(char));
-	if (!result)
-		return (NULL);
+	if (!s1 || !set)
+		return (0);
+	if (*s1 == '\0' || *set == '\0')
+		return (ft_strdup(""));
+	begin_index = 0;
+	while (ft_strchr(set, s1[begin_index]) && s1[begin_index])
+		begin_index++;
+	end_index = ft_strlen(s1);
+	while (ft_strchr(set, s1[end_index - 1]) && end_index)
+		end_index--;
+	result = ft_substr(s1, begin_index, end_index - begin_index);
 	return (result);
 }
