@@ -6,12 +6,11 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:49:12 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/28 14:32:32 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/31 18:41:35 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 #define LIMIT 15
 
