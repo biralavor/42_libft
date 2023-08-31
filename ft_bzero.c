@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 14:32:58 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 15:56:00 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 15:51:32 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,21 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	size_t			index;
+	unsigned char	*newstr;
+
+	index = 0;
+	newstr = (unsigned char *)s;
+	while (n--)
+	{
+		newstr[index] = '\0';
+		index++;
+	}
+	return ;
 }
+
+/*
+#definitions:
+The bzero() function shall place n zero-valued
+bytes in the area pointed to by s.
+*/

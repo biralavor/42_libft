@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 20:33:48 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 15:56:13 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 15:48:23 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ int	main(void)
 	printf("  Original bzero = %s\n", dest);
 	return (0);
 }
-
-/*
-#definitions:
-The bzero() function shall place n zero-valued
-bytes in the area pointed to by s.
-*/

@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 19:13:40 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/28 14:31:17 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/06 17:45:58 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "print_msgs.h"
 // Custom Library functions
 
+#pragma region ft_isalpha_tests
 void	ft_isalpha_test_one_char(void)
 {
 	char	c;
@@ -36,6 +37,7 @@ void	ft_isalpha_test_two_chars(void)
 	else
 		print_result_is_false();
 }
+#pragma endregion ft_isalpha_tests
 
 void	ft_test_all_ft_isalpha(void)
 {
