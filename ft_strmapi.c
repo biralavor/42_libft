@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 08:44:41 by bira              #+#    #+#             */
-/*   Updated: 2023/08/30 17:28:07 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/31 10:09:21 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	iterate = -1;
 	while (s[++iterate] != '\0')
-	{
 		ptr[iterate] = (f)(iterate, s[iterate]);
-	}
 	ptr[iterate] = '\0';
 	return (ptr);
 }
