@@ -6,16 +6,16 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 11:16:00 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:03:03 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:25:42 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // Library header
-// #include "print_msgs.h"
+#include "print_msgs.h"
 // Custom Library functions
-// 
-// char	*ft_strchr(const char *string, int c);
+
+char	*ft_strchr(const char *string, int c);
 /*
 #pragma region ft_strchr_tests
 void	ft_strchr_test_one_o(void)
@@ -53,19 +53,3 @@ int	main(void)
 	printf("Result = %s\n", ft_strchr(str, lookfor));
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char	str[] = "";
-	char	lookfor;
-
-	// str = "";
-	lookfor = '\0';
-	printf("str = %s\n", str);
-	printf("lookfor = '%c'\n", lookfor);
-	printf("Original Result = %s\n", strchr(str, lookfor));
-	printf("\033[0;33m");
-	printf("      My Result = %s\n", ft_strchr(str, lookfor));
-	return (0);
-}*/

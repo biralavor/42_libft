@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 19:57:10 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:23:48 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/16 12:26:36 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	main(void)
 {
-	char	*dest;
-	char	*src;
+	char	dest[99] = "Project, Peers, Play";
+	char	src[99] = "Passion. This is playSTEM academy.";
 
-	dest = "Project, Peers, Play";
-	src = "Passion. This is playSTEM academy.";
 	printf("dest = %s\n", dest);
 	printf("src  = %s\n", src);
 	printf("\033[0;33m");

@@ -6,15 +6,18 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:41 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:22:06 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int	ft_tolower(int c);
 
 int	main(void)
 {
-	char	toconvert;
+	char toconvert;
 
 	toconvert = 'D';
 	printf("Item to test = %c\n", toconvert);
@@ -22,14 +25,3 @@ int	main(void)
 	printf("My function = %c\n", ft_tolower(toconvert));
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char c = 'A';
-
-	printf("Original char = %c\n", c);
-	printf("\033[0;33m");
-	printf("Modified char = %c\n", ft_tolower(c));
-	return (0);
-}*/

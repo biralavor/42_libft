@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 18:48:52 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:05:23 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/10 11:10:01 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,15 @@ size_t	ft_strlen(const char *content)
 		index++;
 	return (index);
 }
+
+/*
+int	main(void)
+{
+	char	*string;
+
+	string = "playSTEM";
+	printf("string = %s\n", string);
+	printf("ft_strlen = %zu\n", ft_strlen(string));
+	return (0);
+}
+*/
