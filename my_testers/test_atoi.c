@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 17:55:02 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/28 14:42:44 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/31 15:55:13 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,17 @@ int	main(void)
 	printf("#2 - Int value (my atoi) = %d\n", my_result);
 	return (0);
 }
+
+/*
+#definitions:
+The atoi function in C converts a string of characters
+to an integer value. The input is a character string and the
+function stops reading the input when it first encounters a
+character that is not a number. The atoi function in C can not
+convert string in decimal and exponent notation.
+It converts the string argument str to an integer (type int)
+   str − This is the string representation of an integral number.
+Return:
+This function returns the converted integral number
+as an int value. If no valid conversion could be performed,
+it returns zero.*/

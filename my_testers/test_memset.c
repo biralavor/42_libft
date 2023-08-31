@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 16:14:03 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 11:54:42 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/31 16:21:10 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int	main(void)
 {
-	char	string[50] = "playSTEM academy";
+	char	*string;
 
+	string = "playSTEM academy";
 	printf("original string = %s\n", string);
 	printf("\033[0;33m");
 	printf("My memset       = %s\n", (char *)ft_memset(string, 'T', 5));
