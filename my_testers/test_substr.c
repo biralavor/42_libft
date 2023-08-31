@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_tolower.c                                     :+:      :+:    :+:   */
+/*   test_substr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:41 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/22 13:43:52 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/31 10:24:32 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,19 @@
 
 int	main(void)
 {
-	char	toconvert;
+	char	*string;
+	int		start;
+	int		len;
+	char	*result;
 
-	toconvert = 'D';
-	printf("Item to test = %c\n", toconvert);
-	printf("Original function = %c\n", tolower(toconvert));
-	printf("My function = %c\n", ft_tolower(toconvert));
+	string = "The site is https://playSTEM.academy/";
+	start = 11;
+	len = 30;
+	printf("\033[0;34m");
+	printf("Original string = %s\n", string);
+	printf("\033[0;33m");
+	result = ft_substr(string, start, len);
+	printf("My subtr        = %s\n", result);
+	free (result);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char c = 'A';
-
-	printf("Original char = %c\n", c);
-	printf("\033[0;33m");
-	printf("Modified char = %c\n", ft_tolower(c));
-	return (0);
-}*/

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_tolower.c                                     :+:      :+:    :+:   */
+/*   test_split.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:41 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/26 14:13:07 by bira              #+#    #+#             */
+/*   Updated: 2023/08/30 12:57:26 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 int	main(void)
 {
-	char	toconvert;
+	char	*s_long;
+	char	delimiter;
+	char	**result;
+	size_t	index;
 
-	toconvert = 'D';
-	printf("Item to test = %c\n", toconvert);
-	printf("Original function = %c\n", tolower(toconvert));
-	printf("My function = %c\n", ft_tolower(toconvert));
+	s_long = "https://playSTEM.academy/";
+	delimiter = 'a';
+	printf("\033[0;34m");
+	printf("s1           = %s\n", s_long);
+	printf("\033[0;33m");
+	printf("delimiter    = '%c'\n", delimiter);
+	result = ft_split(s_long, delimiter);
+	index = 0;
+	while (result[index] != NULL)
+	{
+		printf("My str_split[%zu] = %s\n", index, result[index]);
+		free(result[index]);
+		index++;
+	}
+	free(result);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char c = 'A';
-
-	printf("Original char = %c\n", c);
-	printf("\033[0;33m");
-	printf("Modified char = %c\n", ft_tolower(c));
-	return (0);
-}*/

@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_tolower.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:41 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/24 11:28:38 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/31 16:40:48 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	toconvert;
+	long int	nbr;
 
-	toconvert = 'D';
-	printf("Item to test = %c\n", toconvert);
-	printf("Original function = %c\n", tolower(toconvert));
-	printf("My function = %c\n", ft_tolower(toconvert));
-	return (0);
+	nbr = n;
+	if (nbr == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		nbr = 147483648;
+	}
+	if (nbr < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nbr = nbr * (long long)-1;
+	}
+	if (nbr < 10)
+		return (ft_putchar_fd(((nbr % 10) + '0'), fd));
+	if (nbr >= 10)
+	{
+		ft_putnbr_fd((nbr / 10), fd);
+		ft_putchar_fd(((nbr % 10) + '0'), fd);
+	}
 }
-
-/*
-int	main(void)
-{
-	char c = 'A';
-
-	printf("Original char = %c\n", c);
-	printf("\033[0;33m");
-	printf("Modified char = %c\n", ft_tolower(c));
-	return (0);
-}*/

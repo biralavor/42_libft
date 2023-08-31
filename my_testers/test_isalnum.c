@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_isalnum.c                                     :+:      :+:    :+:   */
+/*   test_isalnum.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 09:58:22 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/06 11:58:49 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:33:51 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 #include "print_msgs.h"
 // Custom Library functions
 
-#pragma region ft_isalnum_tests
 void	ft_isalnum_test_one_num(void)
 {
 	int	test_num;
 
 	test_num = '3';
-
 	if (ft_isalnum(test_num) == 1)
 		print_result_is_true();
 	else
@@ -60,7 +58,6 @@ void	ft_isalnum_test_four_non(void)
 	else
 		print_result_is_false();
 }
-#pragma endregion ft_isalnum_tests
 
 void	ft_test_all_ft_isalnum(void)
 {

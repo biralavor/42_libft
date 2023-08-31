@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_tolower.c                                     :+:      :+:    :+:   */
+/*   test_strmapi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:41 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/31 09:45:32 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/31 10:20:02 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+char	function(unsigned int index, char c)
 {
-	char	toconvert;
+	char	modif_str;
 
-	toconvert = 'D';
-	printf("Item to test = %c\n", toconvert);
-	printf("Original function = %c\n", tolower(toconvert));
-	printf("My function = %c\n", ft_tolower(toconvert));
-	return (0);
+	modif_str = c + 1;
+	return (modif_str);
 }
 
-/*
 int	main(void)
 {
-	char c = 'A';
+	char	*str1;
+	char	*str2;
 
-	printf("Original char = %c\n", c);
+	printf("\033[0;34m");
+	str1 = "gsso9..ok`xRSDL-`b`cdlx.";
+	printf("str1 = %s\n", str1);
+	str2 = ft_strmapi(str1, *function);
 	printf("\033[0;33m");
-	printf("Modified char = %c\n", ft_tolower(c));
+	printf("str2 = %s\n", str2);
+	free(str2);
 	return (0);
-}*/
+}

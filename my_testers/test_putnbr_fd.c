@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   test_putnbr_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bira <bira@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/10 14:57:23 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:03 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/24 12:50:50 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/25 20:34:30 by bira             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+int	main(void)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	long long	nbr;
+
+	nbr = -2147483648LL;
+	printf("\033[0;34m");
+	printf("nbr original  = \n");
+	printf("%lli\n", nbr);
+	printf("\033[0;33m");
+	printf("putnbr_fd de nbr = ");
+	printf("\n");
+	ft_putnbr_fd(nbr, 1);
+	printf("\n");
+	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_tolower.c                                     :+:      :+:    :+:   */
+/*   test_strjoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:41 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/26 12:16:47 by bira              #+#    #+#             */
+/*   Updated: 2023/08/30 19:12:21 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,18 @@
 
 int	main(void)
 {
-	char	toconvert;
+	char	*s1;
+	char	*s2;
+	char	*result;
 
-	toconvert = 'D';
-	printf("Item to test = %c\n", toconvert);
-	printf("Original function = %c\n", tolower(toconvert));
-	printf("My function = %c\n", ft_tolower(toconvert));
+	s1 = "https://";
+	s2 = "playSTEM.academy/";
+	printf("\033[0;34m");
+	printf("s1 = %s\n", s1);
+	printf("s2 = %s\n", s2);
+	printf("\033[0;33m");
+	result = ft_strjoin(s1, s2);
+	printf("strjoin = %s\n", result);
+	free (result);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char c = 'A';
-
-	printf("Original char = %c\n", c);
-	printf("\033[0;33m");
-	printf("Modified char = %c\n", ft_tolower(c));
-	return (0);
-}*/

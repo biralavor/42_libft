@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_tolower.c                                     :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 16:07:41 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/23 19:22:34 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/24 10:59:48 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	toconvert;
+	size_t	index;
+	size_t	len;
+	char	c;
 
-	toconvert = 'D';
-	printf("Item to test = %c\n", toconvert);
-	printf("Original function = %c\n", tolower(toconvert));
-	printf("My function = %c\n", ft_tolower(toconvert));
-	return (0);
+	index = 0;
+	len = ft_strlen(s);
+	while (index < len)
+	{
+		c = s[index];
+		write(fd, &c, 1);
+		index++;
+	}
 }
-
-/*
-int	main(void)
-{
-	char c = 'A';
-
-	printf("Original char = %c\n", c);
-	printf("\033[0;33m");
-	printf("Modified char = %c\n", ft_tolower(c));
-	return (0);
-}*/
