@@ -6,11 +6,13 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 17:55:02 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/31 15:55:13 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/09/01 15:54:17 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
@@ -18,7 +20,7 @@ int	main(void)
 	int		my_result;
 	char	str[20];
 
-	strcpy(str, "\010 9");
+	strcpy(str, "\010 +9");
 	printf("\033[0;34m");
 	result = atoi(str);
 	printf("#1 - String value = %s\n", str);
