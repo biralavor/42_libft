@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_result_is_true.c                             :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 16:38:07 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/02 19:22:04 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/26 08:44:41 by bira              #+#    #+#             */
+/*   Updated: 2023/08/31 10:09:21 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	print_result_is_true(void)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	printf("\033[1;32m");
-	printf("Test is OK. Congrats!\n");
+	char			*ptr;
+	unsigned int	s_len;
+	unsigned int	iterate;
+
+	if (!s || !f)
+		return (NULL);
+	s_len = ft_strlen((char *)s);
+	ptr = (char *)ft_calloc((s_len + 1), sizeof(char));
+	if (!ptr)
+		return (NULL);
+	iterate = -1;
+	while (s[++iterate] != '\0')
+		ptr[iterate] = (f)(iterate, s[iterate]);
+	ptr[iterate] = '\0';
+	return (ptr);
 }

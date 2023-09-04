@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_toupper.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/07 13:15:45 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/07 13:22:35 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/24 11:07:16 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/24 11:10:14 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-int	ft_toupper(int c);
-
-int	main(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char toconvert;
-
-	toconvert = 'p';
-	printf("Item to test = %c\n", toconvert);
-	printf("Original function = %c\n", toupper(toconvert));
-	printf("My function = %c\n", ft_toupper(toconvert));
-	return (0);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

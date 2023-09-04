@@ -6,9 +6,11 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 17:36:38 by bira              #+#    #+#             */
-/*   Updated: 2023/08/10 14:42:02 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/09/03 16:52:45 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int input)
 {

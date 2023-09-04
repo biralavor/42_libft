@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_result_is_false.c                            :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bira <bira@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 16:38:43 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/02 19:22:06 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/25 21:28:45 by bira              #+#    #+#             */
+/*   Updated: 2023/08/26 08:36:07 by bira             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	print_result_is_false(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	printf("\033[1;31m");
-	printf("Test failed! Sorry, newbie. Try it again.\n");
+	size_t	index;
+
+	index = -1;
+	while (s[++index] != '\0')
+		(*f)(index, &s[index]);
 }

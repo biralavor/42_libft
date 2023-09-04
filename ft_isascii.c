@@ -6,11 +6,9 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:31:09 by bira              #+#    #+#             */
-/*   Updated: 2023/08/10 14:40:26 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/09/03 16:48:17 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int content)
 {

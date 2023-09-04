@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_memcpy.c                                      :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/08 19:57:10 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 12:26:36 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/26 12:11:43 by bira              #+#    #+#             */
+/*   Updated: 2023/08/30 18:31:08 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	dest[99] = "Project, Peers, Play";
-	char	src[99] = "Passion. This is playSTEM academy.";
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*result;
 
-	printf("dest = %s\n", dest);
-	printf("src  = %s\n", src);
-	printf("\033[0;33m");
-	ft_memcpy(dest, src, 5);
-	printf("My ft_memcpy dest = %s\n", dest);
-	printf("\033[0;34m");
-	memcpy(dest, src, 5);
-	printf("  Original memcpy = %s\n", dest);
-	return (0);
+	if (!s1 || !s2)
+		return (NULL);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	result = (char *)ft_calloc((s1_len + s2_len + 1), sizeof(char));
+	if (!result)
+		return (NULL);
+	ft_strlcpy(result, s1, (s1_len + 1));
+	ft_strlcat(result, s2, (s1_len + s2_len + 1));
+	result[s1_len + s2_len] = '\0';
+	return (result);
 }

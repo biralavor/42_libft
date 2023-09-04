@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_memchr.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 10:59:22 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/16 16:15:38 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/23 19:22:34 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/24 10:59:48 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned char	bigchar[99] = "playSTEM academy";
-	int				c;
-	unsigned char	*result;
-	
-	c = 'S';
-	printf("bigchar = %s\n", bigchar);
-	printf("look for char = '%c'\n", c);
-	printf("\033[0;33m");
-	result = ft_memchr(bigchar, c, sizeof(bigchar));
-	printf("Result = %s\n", result);
-	return (0);
+	size_t	index;
+	size_t	len;
+	char	c;
+
+	index = 0;
+	len = ft_strlen(s);
+	while (index < len)
+	{
+		c = s[index];
+		write(fd, &c, 1);
+		index++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/09/04 10:41:17 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/09/03 16:47:53 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t n_items, size_t size);
-int		ft_isalnum(unsigned char content);
+int		ft_isalnum(int content);
 int		ft_isalpha(int c);
 int		ft_isascii(int content);
 int		ft_isdigit(int input);

@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/09 18:06:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/30 17:24:42 by umeneses         ###   ########.fr       */
+/*   Created: 2023/08/21 19:55:19 by umeneses          #+#    #+#             */
+/*   Updated: 2023/08/31 09:30:54 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
+	size_t	s_len;
 
-	ptr = (char *)ft_calloc((ft_strlen(src) + 1), sizeof(char));
+	s_len = ft_strlen((char *)s);
+	if (start >= s_len || s[0] == '\0')
+		return (ft_calloc(1, sizeof(char)));
+	if (s_len - start < len)
+	{
+		len = s_len - start + 1;
+		ptr = ft_calloc(len, sizeof(char));
+	}
+	if (s_len - start >= len)
+		ptr = ft_calloc((len + 1), sizeof(char));
 	if (!ptr)
 		return (NULL);
-	ft_memcpy(ptr, src, ft_strlen(src));
-	ptr[ft_strlen(src)] = '\0';
+	ft_strlcpy(ptr, (s + start), (len + 1));
 	return (ptr);
 }
