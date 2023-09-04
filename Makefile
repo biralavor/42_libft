@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/08/21 14:11:53 by umeneses         ###   ########.fr        #
+#    Updated: 2023/09/04 10:31:01 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,19 +45,13 @@ SRC_FTS				= ft_atoi.c		\
 
 LIBFT_PATH			= $(shell dirname $(shell pwd))/Libft_GitHub
 
-INCLUDE_PATH		= $(LIBFT_PATH)/
-
 INCLUDE				= libft.h
 
 OBJS 				= $(SRC_FTS:.c=.o)
-# Use same files from SRC, but change .c to .o
 
 AR 					= @ar -rcs
-# ARCHIVE adds OBJS files *.o static library (NAME),
-# creating library (NAME) if it don't exist.
 
 RM 					= rm -f
-# Remove files command
 
 CC 					= gcc
 
@@ -66,16 +60,14 @@ CFLAGS 				= -Wall -Wextra -Werror
 NORM				= norminette -R CheckForbiddenSourcHeader
 
 all:				$(NAME)
-# default all command to compile
 
 $(NAME):			$(OBJS)
-					@echo "\n$(SUCCESS) '$(NAME)' file was generated :D $(COLOR_OFF)"
+					$(AR) $(NAME) $(OBJS)
 					$(NORM) $(SRC_FTS) $(INCLUDE)
 					@echo "\n$(SUCCESS)The functions below were added into $(NAME):$(COLOR_OFF)"
 					@echo "$(UPDATING)$(SRC_FTS)$(COLOR_OFF)"
+					@echo "\n$(SUCCESS)The file '$(NAME)' was generated :D $(COLOR_OFF)"
 					@echo "$(SUCCESS)\o/$(COLOR_OFF)"
-					$(AR) $(NAME) $(OBJS)
-# Compile files following above rules
 
 %.o: %.c
 					$(CC) -c $(CFLAGS) $< -o $@ -I $(INCLUDE_PATH)$(INCLUDE)
@@ -84,7 +76,6 @@ $(NAME):			$(OBJS)
 clean:
 					@echo "\n$(NAME): $(WARNING)object files were deleted O.o$(COLOR_OFF)"
 					$(RM) $(OBJS)
-# Clean generated *.o files
 
 fclean:				
 					@$(RM) $(OBJS)
@@ -93,11 +84,7 @@ fclean:
 					@echo "$(WARNING)It's clean: $(NAME) was deleted O.o$(COLOR_OFF)"
 					@$(RM) $(EXECUTABLE)
 					@echo "$(WARNING)It's clean: $(EXECUTABLE) was deleted T.T$(COLOR_OFF)"
-# Force clean all files generated on all
 
 re:					fclean all
-# Regenerate compilation
 
 .PHONY:				all clean fclean re
-# Phony will run, independent from state of the file system,
-# avoid make in files with same name.

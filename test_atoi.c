@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 17:55:02 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/21 16:41:56 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/09/04 10:42:40 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	main (void)
 {
-	int result;
+	int	result;
 	int	my_result;
-	char str[20];
+	char	str[20];
 
-	strcpy(str, "\010 9");
+	strcpy(str, "\010 +9");
 	printf("\033[0;34m");
 	result = atoi(str);
 	printf("#1 - String value = %s\n", str);
