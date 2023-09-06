@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile copy                                      :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/09/03 16:09:24 by umeneses         ###   ########.fr        #
+#    Updated: 2023/09/06 14:32:38 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,8 @@ SRC_FTS				= ft_atoi.c		\
 					ft_split.c		\
 					ft_strtrim.c
 
+BONUS_FTS			= ft_lstnew.c
+
 INCLUDE				= libft.h
 
 OBJS 				= $(SRC_FTS:.c=.o)
@@ -68,6 +70,8 @@ $(NAME):			$(OBJS)
 %.o: %.c
 					$(CC) -c $(CFLAGS) $< -o $@
 					$(AR) $(NAME) $@
+
+make bonus:
 
 clean:
 					$(RM) $(OBJS)
