@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/09/06 14:32:38 by umeneses         ###   ########.fr        #
+#    Updated: 2023/09/11 15:01:28 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,21 @@ SRC_FTS				= ft_atoi.c		\
 					ft_split.c		\
 					ft_strtrim.c
 
-BONUS_FTS			= ft_lstnew.c
+BONUS_FTS			= ft_lstadd_front_bonus.c	\
+					ft_lastadd_back_bonus.c		\
+					ft_lstclear_bonus.c			\
+					ft_lstdelone_bonus.c		\
+					ft_lstiter_bonus.c			\
+					ft_lstlast_bonus.c			\
+					ft_lstmap_bonus.c			\
+					ft_lstnew_bonus.c			\
+					ft_lstsize_bonus.c			\
 
 INCLUDE				= libft.h
 
 OBJS 				= $(SRC_FTS:.c=.o)
+
+BONUS_OBJS			= $(BONUS_FTS:.c=.o)
 
 AR 					= ar -rcs
 
@@ -71,10 +81,10 @@ $(NAME):			$(OBJS)
 					$(CC) -c $(CFLAGS) $< -o $@
 					$(AR) $(NAME) $@
 
-make bonus:
+bonus:				$(BONUS_OBJS)
 
 clean:
-					$(RM) $(OBJS)
+					$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:				clean
 					$(RM) $(NAME)

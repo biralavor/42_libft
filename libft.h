@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/09/06 15:55:38 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/09/11 15:00:24 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_strtrim(char const *s1, char const *set);
 /* Mandatory Part 2 Functions */
+
+t_list	*ft_lstnew(void *content);
+/* Bonus Functions */
 
 #endif
