@@ -6,7 +6,7 @@
 #    By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 20:31:36 by umeneses          #+#    #+#              #
-#    Updated: 2023/09/11 15:01:28 by umeneses         ###   ########.fr        #
+#    Updated: 2023/09/11 15:08:24 by umeneses         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ SRC_FTS				= ft_atoi.c		\
 					ft_strtrim.c
 
 BONUS_FTS			= ft_lstadd_front_bonus.c	\
-					ft_lastadd_back_bonus.c		\
+					ft_lstadd_back_bonus.c		\
 					ft_lstclear_bonus.c			\
 					ft_lstdelone_bonus.c		\
 					ft_lstiter_bonus.c			\
