@@ -6,13 +6,16 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:11:00 by umeneses          #+#    #+#             */
-/*   Updated: 2023/08/23 19:12:10 by umeneses         ###   ########.fr       */
+/*   Updated: 2023/12/12 14:45:34 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(int c, int fd)
 {
-	write(fd, &c, 1);
+	int	len;
+
+	len = write(fd, &c, 1);
+	return (len);
 }

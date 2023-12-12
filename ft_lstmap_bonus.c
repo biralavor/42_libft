@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 19:22:34 by umeneses          #+#    #+#             */
-/*   Updated: 2023/12/12 14:47:50 by umeneses         ###   ########.fr       */
+/*   Created: 2023/09/11 13:58:17 by umeneses          #+#    #+#             */
+/*   Updated: 2023/09/11 14:10:22 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	index;
-	size_t	len;
-	char	c;
+	t_list	*new_node;
 
-	if (!s)
-		return (ft_putstr_fd("(null)", 1));
-	index = 0;
-	len = ft_strlen(s);
-	while ((*s != '\0') && (index < len))
-	{
-		c = s[index];
-		write(fd, &c, 1);
-		index++;
-	}
-	return (len);
+	new_node = ft_calloc(1, sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node = ft_lstiter(lst, f);
+	return (new_node);
 }
