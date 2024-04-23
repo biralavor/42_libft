@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2023/12/13 14:56:16 by umeneses         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:28:49 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,57 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-/*	Headers for mandatory functions */
+/* Headers for LIBFT && GNL mandatory functions */
+# include <stdarg.h>
+/* Headers for ft_printf */
 
-typedef struct s_list
+# define DEC "0123456789"
+# define HEXL "0123456789abcdef"
+# define HEXU "0123456789ABCDEF"
+/* Definitions for ft_printf */
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+# ifndef MAX_FDS
+#  define MAX_FDS 1024
+# endif
+/* Definitions for GNL BUFFER */
+
+# define RED "\033[0;31m"
+# define GREEN "\033[0;32m"
+# define YELLOW "\033[0;33m"
+# define BLUE "\033[0;34m"
+# define PURPLE "\033[0;35m"
+# define CYAN "\033[0;36m"
+# define COLOR_RESET "\033[0m"
+/* Color definitions for STDOUT */
+
+typedef struct lib_s_list
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+	void				*content;
+	struct lib_s_list	*next;
+}						t_list;
+/* libft structures */
+
+typedef struct s_list	t_char;
+struct s_list
+{
+	char	c;
+	t_char	*next;
+};
+
+typedef struct s_file_container
+{
+	int		index;
+	int		read;
+	int		len;
+	int		fd;
+	char	buffer[BUFFER_SIZE];
+	t_char	*str;
+}			t_file_container;
+/* gnl structures */
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
@@ -47,7 +91,7 @@ char			*ft_strnstr(const char *haystack, const char *tofind, \
 char			*ft_strrchr(const char *str, int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-/* Mandatory Part 1 Functions */
+/* libft Mandatory Part 1 Functions */
 
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_itoa(int n);
@@ -60,18 +104,38 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strjoin(char const *s1, char const *s2);
 char			**ft_split(char const *s, char c);
 char			*ft_strtrim(char const *s1, char const *set);
-/* Mandatory Part 2 Functions */
+/* libft Mandatory Part 2 Functions */
 
-t_list			*ft_lstnew(void *content);
-void			ft_lstadd_front(t_list **lst, t_list *new);
-int				ft_lstsize(t_list *lst);
-t_list			*ft_lstlast(t_list *lst);
-void			ft_lstadd_back(t_list **lst, t_list *new);
-void			ft_lstdelone(t_list *lst, void (*del)(void*));
-void			ft_lstclear(t_list **lst, void (*del)(void *));
-void			ft_lstiter(t_list *lst, void (*f)(void *));
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
+t_list			*ft_lstnew_t_list(void *content);
+void			ft_lstadd_front_void(t_list **lst, t_list *new);
+int				ft_lstsize_int(t_list *lst);
+t_list			*ft_lstlast_t_list(t_list *lst);
+void			ft_lstadd_back_void(t_list **lst, t_list *new);
+void			ft_lstdelone_void(t_list *lst, void (*del)(void*));
+void			ft_lstclear_void(t_list **lst, void (*del)(void *));
+void			ft_lstiter_void(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap_t_list(t_list *lst, void *(*f)(void *), \
 					void (*del)(void *));
-/* Bonus Functions */
+/* libft Bonus Functions */
+
+int				ft_printf(const char *format, ...);
+int				ft_printf_placeholder(char format, va_list ptr);
+int				ft_putnbrbase(long long int n, char *base);
+int				ft_putptr(long long int n, char *base);
+int				ft_put_unsigned_nbr(unsigned long long int n, char *base);
+/* ft_printf functions */
+
+char			*ft_get_next_line(int fd);
+char			*ft_gnl_get_line(t_file_container *file);
+char			*ft_gnl_join_line(t_file_container *file);
+/* gnl main prototype functions */
+
+t_char			*ft_gnl_get_let(char let);
+void			ft_gnl_join_let(t_char **head, t_char *new_let);
+char			*ft_gnl_clear_nodes(t_char *str);
+/* gnl prototype functions */
+
+void	ft_error_msg(char *string);
+/* my functions */
 
 #endif

@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstclear_void.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 13:58:17 by umeneses          #+#    #+#             */
-/*   Updated: 2023/09/11 14:10:22 by umeneses         ###   ########.fr       */
+/*   Created: 2023/09/11 13:35:16 by umeneses          #+#    #+#             */
+/*   Updated: 2024/01/19 10:56:03 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_lstclear_void(t_list **lst, void (*del)(void *))
 {
-	t_list	*new_node;
+	t_list	*temp;
 
-	new_node = ft_calloc(1, sizeof(t_list));
-	if (!new_node)
-		return (NULL);
-	new_node = ft_lstiter(lst, f);
-	return (new_node);
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		ft_lstdelone_void(*lst, del);
+		*lst = temp;
+	}
+	free (temp);
+	return ;
 }
