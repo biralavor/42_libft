@@ -6,7 +6,7 @@
 /*   By: umeneses <umeneses@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 20:30:01 by umeneses          #+#    #+#             */
-/*   Updated: 2024/04/23 14:28:49 by umeneses         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:34:02 by umeneses         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 /* Headers for LIBFT && GNL mandatory functions */
 # include <stdarg.h>
 /* Headers for ft_printf */
+
+# include <stdbool.h>
 
 # define DEC "0123456789"
 # define HEXL "0123456789abcdef"
@@ -44,6 +46,7 @@
 
 typedef struct lib_s_list
 {
+	struct lib_s_list	*prev;
 	void				*content;
 	struct lib_s_list	*next;
 }						t_list;
@@ -70,11 +73,11 @@ typedef struct s_file_container
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t n_items, size_t size);
-int				ft_isalnum(int content);
-int				ft_isalpha(int c);
-int				ft_isascii(int content);
-int				ft_isdigit(int input);
-int				ft_isprint(int content);
+bool			ft_isalnum(int content);
+bool			ft_isalpha(int c);
+bool			ft_isascii(int content);
+bool			ft_isdigit(int input);
+bool			ft_isprint(int content);
 void			*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *str1, const void *str2, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -106,17 +109,18 @@ char			**ft_split(char const *s, char c);
 char			*ft_strtrim(char const *s1, char const *set);
 /* libft Mandatory Part 2 Functions */
 
-t_list			*ft_lstnew_t_list(void *content);
-void			ft_lstadd_front_void(t_list **lst, t_list *new);
-int				ft_lstsize_int(t_list *lst);
-t_list			*ft_lstlast_t_list(t_list *lst);
 void			ft_lstadd_back_void(t_list **lst, t_list *new);
-void			ft_lstdelone_void(t_list *lst, void (*del)(void*));
+void			ft_lstadd_front_void(t_list **lst, t_list *new);
 void			ft_lstclear_void(t_list **lst, void (*del)(void *));
+void			ft_lstdelone_void(t_list *lst, void (*del)(void*));
+t_list			*ft_lstend_void(t_list *list, void *value);
 void			ft_lstiter_void(t_list *lst, void (*f)(void *));
+t_list			*ft_lstlast_t_list(t_list *lst);
 t_list			*ft_lstmap_t_list(t_list *lst, void *(*f)(void *), \
 					void (*del)(void *));
-/* libft Bonus Functions */
+t_list			*ft_lstnew_t_list(void *content);
+int				ft_lstsize_int(t_list *lst);
+/* libft Bonus Functions - linked list */
 
 int				ft_printf(const char *format, ...);
 int				ft_printf_placeholder(char format, va_list ptr);
@@ -135,7 +139,9 @@ void			ft_gnl_join_let(t_char **head, t_char *new_let);
 char			*ft_gnl_clear_nodes(t_char *str);
 /* gnl prototype functions */
 
-void	ft_error_msg(char *string);
+void			ft_error_msg(char *string);
+char			*ft_dec_to_binary(int number);
+char			*ft_strreversing_order(char *string);
 /* my functions */
 
 #endif
